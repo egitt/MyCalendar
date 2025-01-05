@@ -75,7 +75,6 @@ public class MyCalendar {
                             vEvent = new VEvent(new PropertyList(propertyList));
                             if (!calendarDataByUid.containsKey(uid)) {
                                 propertyList.add(new Uid(uid));
-                                propertyList.add(new Status(Status.VALUE_CONFIRMED));
                                 propertyList.add(new RRule<LocalDate>(Frequency.YEARLY));
                                 calendarDataByUid.put(uid, vEvent);
                             }
